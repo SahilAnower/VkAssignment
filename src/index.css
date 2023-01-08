@@ -1,13 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #222222;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Sidebar */
+
+.sidebar {
+  background-color: #000000;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  border-right: 0.5px solid #fff;
+}
+
+.logoImg {
+  font-family: 'Moon Dance', cursive;
+  font-size: 3rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.navigations_menu-item {
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.2rem;
+  transition: 0.6s ease-in-out;
+}
+
+.navigations_menu-item:hover {
+  background-color: #222222;
+  border-radius: 50px;
+}
+
+.navigations_menu-item > span {
+  margin-right: 0.8rem;
+}
+
+.menu-item_last {
+  margin-top: 4rem;
+}
+
+/* Container */
+
+.container {
+  display: flex;
+}
+
+.main {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ProfileDesc */
+
+.profileDesc {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.001rem solid #fcffe7;
+}
+
+.profileImage > .image {
+  border-radius: 50%;
+  width: 200px;
+  margin-right: 5rem;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  margin-right: 3rem;
+}
+
+.tick {
+  background-color: #fff;
+  color: #0081c9;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: #0081c9;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background-color: #205295;
+}
+
+.btn-bg {
+  background-color: #222222;
+  color: #fff;
+}
+
+.followers {
+  margin-top: 0.8rem;
+  display: flex;
+}
+
+.followers > div {
+  margin-right: 3.5rem;
+  cursor: pointer;
+}
+
+.nameDesc,
+.followedDesc > p {
+  margin: 2px auto;
+  font-size: 0.8rem;
+}
+
+/* ProfilePosts */
+
+.allPosts {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.postImage {
+  width: 293px;
+  height: 293px;
+  margin: 0.8rem;
+  border-radius: 5px;
+}
+
+.eachPost {
+  position: relative;
+}
+
+.eachPost > img {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.eachPost > img:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.postLikes {
+  position: absolute;
+  top: 9rem;
+  left: 5.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.postLikes span:first-of-type {
+  margin-right: 1.5rem;
+}
+
+.off {
+  display: none;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories > div {
+  margin: 0 2rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.active {
+  border-top: 3px solid #fcffe7;
+  border-radius: 2px;
 }
